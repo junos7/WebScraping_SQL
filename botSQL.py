@@ -1,7 +1,6 @@
 import os
 import requests
 import mysql.connector
-from bs4 import BeautifulSoup
 from config import userSite, senhaSite, senhaSQL, siteLogin, idInicial, idFinal, siteAcesso
 
 
@@ -59,7 +58,7 @@ with requests.session() as s:
                 con.commit()
                 print(f'ID {id} inserido no banco de dados')
                 
-         os.remove(nomedoc)
+        os.remove(nomedoc)
 
 
         else:
